@@ -33,24 +33,36 @@ def nicotine(text):
         return
 
     if nicIn < nicOut:
-        print("Cannot make {:g}mg with {:g}mg base".format(nicOut, nicIn).rstrip('0').rstrip('.'))
+        print("Cannot make {:g}mg with {:g}mg base".format(nicOut, nicIn))
         return
 
     nicNeeded = nicOut*batch
     nicVolume = nicNeeded/nicIn
 
-    print("For {:g}ml of {:g}mg liquid you will need {:g}ml of {:g}mg base".format(batch, nicOut, nicVolume, nicIn).rstrip('0').rstrip('.'))
+    print("For {:g}ml of {:g}mg liquid you will need {:g}ml of {:g}mg base".format(batch, nicOut, nicVolume, nicIn))
     return
 
 
 
 nicotine("18 60 3")
+print("pass")
 nicotine("18mg 60ml 3mg")
+print("pass")
 nicotine("72 100 3")
+print("pass")
+nicotine("18 1000 3")
+print("pass")
 nicotine("why would you")
+print("Fail")
 nicotine("18sdf")
+print("Fail")
 nicotine("")
+print("Fail")
 nicotine(" ")
+print("Fail")
 nicotine("! ! !")
+print("Fail")
 nicotine("1 100 10")
+print("Fail")
 nicotine("10.1 50.f 60")
+print("Fail")
